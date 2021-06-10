@@ -1,8 +1,9 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCar } from '@fortawesome/free-solid-svg-icons';
-import MetaTags from 'react-meta-tags';
+// import MetaTags from 'react-meta-tags';
 import Nav from "../components/nav"
+import Footer from "../components/footer"
 
 function PriceCards() {
   return (
@@ -202,6 +203,7 @@ function PriceCards() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

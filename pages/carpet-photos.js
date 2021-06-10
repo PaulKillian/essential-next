@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Gallery from 'react-grid-gallery';
 import Nav from "../components/nav"
+import Footer from "../components/footer"
 
 function CarpetGallery() {
   useEffect(() => {
@@ -137,14 +138,17 @@ function CarpetGallery() {
   return (
     <>
       <Nav />
-      <h1 className="text-font text-dark text-center mt-4 mb-5 pt-5">Carpet Cleaning</h1>
-      <div className={'d-flex justify-content-center col-md-12 pb-5'}>
-        <div style={{
-          width: '87%'
-        }}>
-          < Gallery images={IMAGES} />
+      <div id="main" className="div1 w-100 marble pb-5">
+        <h1 className="text-font text-dark text-center mb-5 pt-5">Carpet Cleaning</h1>
+        <div className={'d-flex justify-content-center col-md-12 pb-5'}>
+          <div style={{
+            width: '87%'
+          }}>
+            < Gallery images={IMAGES} />
+          </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

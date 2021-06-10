@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import Nav from '../components/nav'
+import Footer from "../components/footer"
 
 export default function Review() {
 //   useEffect(() => {
@@ -6,12 +8,14 @@ export default function Review() {
 //   });
   return (
     <>
+    <Nav />
+     <div id="main" className="foot1 pb-5">
       <div className="col-12 bottom">
         <div className="d-flex justify-content-center align-items-center flex-column">
           <h1 className=" mt-4 shadowed-text text-font text-white">Reviews</h1>
         </div>
       </div>
-      <div className='col-sm-9 col-md-11 col-lg-8 mt-5 container text-white text-left'>
+      <div className='col-sm-9 col-md-11 col-lg-6 mt-5 container text-white text-left'>
         <div className={'mb-5 py-3 blur2 shadowed'}>
           <h5 className={'px-3'}>Ken has been a vendor for our company for several years. He is prompt, trustworthy and does a thorough and comprehensive job. He also is proactive. If he sees a problem he will point it out and help us resolve it or point us to someone who can. We have been very pleased with his service and his ongoing consistency. You can count on Ken to do what he says in a timely and efficient manner.
             <br></br><br></br><span className={'text-center'}><h5>Guy Baker - Wealth Teams Solutions, Irvine CA</h5></span></h5>
@@ -38,7 +42,7 @@ export default function Review() {
           <h5 className={'px-3'}>Ken Mendoza has worked on my car a few times, and I continue to go back to him because his work is top shelf. He is professional, detailed, and his work is amazing, making my 2007 exterior brilliant and like-new with great attention to detail. Next time, I am definitely going to have him do the full detail, because I know I&apos;ll be as pleased with the interior. I highly recommend Ken to anyone who wants their car restored to a striking condition. This guy knows his stuff!
             <br></br><br></br><span className={'text-center'}><h5>Jeff Scattareggia</h5></span></h5>
         </div>
-        <div className={'mb-5 py-3 blur2 shadowed'}>
+        <div className={'py-3 blur2 shadowed'}>
           <h5 className={'px-3'}>Ken has been washing and detailing my car for a number of months now.  His work has been fabulous and I have received comments on how good my car looks.  I
               have him come to my home once a month and he either washes or details my car.  I depend on him to tell me the best way to keep my car looking good.  He is
               someone I trust to take care of my car.  I would not take my car anywhere else now.  It is so convenient and it costs me less to have him come to my house
@@ -46,6 +50,8 @@ export default function Review() {
           <br></br><br></br><span className={'text-center'}><h5>Rich Mraules</h5></span></h5>
         </div>
       </div>
+      </div>
+      <Footer />
     </>
   );
 }

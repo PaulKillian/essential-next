@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Gallery from 'react-grid-gallery';
 import Nav from "../components/nav"
+import Footer from "../components/footer"
 
 function UpholsteryGallery() {
   useEffect(() => {
@@ -37,8 +38,9 @@ function UpholsteryGallery() {
 
   return (
     <>
-    <Nav />
-      <h1 className="text-font text-dark text-center mt-4 mb-5 pt-5">Upholstery Cleaning</h1>
+    <Nav class={'mr-3'}/>
+    <div id="main" className="div1 w-100 marble pb-5">
+      <h1 className="text-font text-dark text-center mb-5 pt-5">Upholstery Cleaning</h1>
       <div className={'d-flex justify-content-center pb-5'}>
         <div style={{
           width: '87%'
@@ -46,6 +48,8 @@ function UpholsteryGallery() {
           < Gallery images={IMAGES} />
         </div>
       </div>
+      </div>
+      <Footer />
     </>
   );
 }

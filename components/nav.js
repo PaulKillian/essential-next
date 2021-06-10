@@ -13,6 +13,7 @@ import { green } from '@material-ui/core/colors';
 import RateReviewIcon from '@material-ui/icons/RateReview';
 import WorkIcon from '@material-ui/icons/Work';
 import DateRangeIcon from '@material-ui/icons/DateRange';
+import '../styles/Nav.module.css'
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -49,7 +50,7 @@ class Navbar extends React.Component {
 
   render() {
     let modalStyles = 'modal-overlay m-0 p-0';
-    let cssClass = 'side-menu menu-bg text-dark';
+    let cssClass = 'side-menu menu-bg k';
 
     if (!this.state.isShown) {
       modalStyles += ' hide';
@@ -62,14 +63,14 @@ class Navbar extends React.Component {
     return (
       <>
         <div className={modalStyles} onClick={this.hideMenu}></div>
-        <div className={ 'd-flex justify-content-end top col-sm-12 col-md-12 col-lg-12 position-absolute pr-3 mt-3' }>
-          <div className={ 'row d-flex justify-content-end col-sm-2 col-md-2 col-lg-2' }>
-            <FontAwesomeIcon icon={faBars} size="3x" className="hamburger-color  top pointer"
+        <div className={ 'd-flex justify-content-end top col-sm-12 col-md-12 col-lg-12 nav-position position-absolute mt-3 left' }>
+          <div className={ 'row d-flex justify-content-end col-sm-2 col-md-2 col-lg-1' }>
+            <FontAwesomeIcon icon={faBars} size="3x" className="hamburger-color top pointer"
               onClick={() => this.handleToggleClick()}/>
           </div>
         </div>
         <div className={cssClass} onClick={this.hideMenu}>
-          <ul className="navbar-nav ">
+          <ul className="navbar-nav">
             <li className={'bg-footer shadowed col-12'}>
               <div className={'menu-logo ml-3 d-flex text-shadow '}>
                 <div className={'text-primary'}>E</div>
@@ -77,53 +78,48 @@ class Navbar extends React.Component {
                 <div className={'text-white '}>O</div>
               </div>
             </li >
-            <HomeIcon style={{ color: green[500] }}/>
-            <Link href="/" exact className="text-dark text-left nav-item mt-3 ml-3"><a>Home/Services</a>
-              {/* <li>
+              <li className="nav-item ml-3 pt-3">
+                <HomeIcon className="mx-2" style={{ color: green[500] }}/>
+                <Link href="/" exact className="text-left nav-item mt-3 ml-3"><a>Home/Services</a></Link>
                 <hr className={'style'}></hr>
-              </li> */}
-            </Link>
-            <DateRangeIcon style={{ color: green[500] }}/> 
-            <Link href="/carpet-estimate" exact className="text-dark ml-3 nav-item"><a>Carpet/Upholstery Estimate</a></Link>
-            {/* <li className="nav-item ml-3">
-              <hr id={'second-to-last-hr'} className={'style'}></hr>
-            </li> */}
-            <DirectionsCarIcon style={{ color: green[500] }}/> 
-            <Link href="/auto-estimate" exact className="text-dark ml-3 nav-item"><a>Auto Detailing Estimate</a>
-              {/* <li>
+              </li>
+              <li className="nav-item ml-3">
+                <DateRangeIcon className="mx-2" style={{ color: green[500] }}/> 
+                <Link href="/carpet-estimate" exact className="ml-3 nav-item"><a>Carpet/Upholstery Estimate</a></Link>
+                <hr id={'second-to-last-hr'} className={'style'}></hr> 
+              </li>
+              <li className="nav-item ml-3">
+                <DirectionsCarIcon className="mx-2" style={{ color: green[500] }}/> 
+                <Link href="/auto-estimate" exact className="ml-3 nav-item"><a>Auto Detailing Estimate</a></Link>
                 <hr className={'style'}></hr>
-              </li> */}
-            </Link>
-            <WorkIcon style={{ color: green[500] }}/> 
-            <Link href="/auto-services" className="text-dark ml-3 nav-item text-left"><a>Auto Services</a>
-              {/* <li className="nav-item ml-3">
+              </li>
+              <li className="nav-item ml-3">
+                <WorkIcon className="mx-2" style={{ color: green[500] }}/> 
+                <Link href="/auto-services" className="ml-3 nav-item text-left"><a>Auto Services</a></Link>
                 <hr id={'last-hr'} className={'style'}></hr>
-              </li> */}
-            </Link>
-            <li className={'bax-shad'}>
-              <Accordion className={'text-left ml-2 nav-item accordion-bg col-12'}>
+              </li>
+            <li className={'nav-item'}>
+              <Accordion className={'text-left nav-item accordion-bg col-12'}>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
                   aria-controls="panel1a-content"
                   id="panel1a-header"
                 >
-                  <div><PhotoCamera style={{ color: green[500] }} /> Photos</div>
+                  <div><PhotoCamera className="mr-1" style={{ color: green[500] }} /> Photos</div>
                 </AccordionSummary>
-                <AccordionDetails className={'text-dark'}>
+                <AccordionDetails>
                   <div className={'d-flex flex-column'}>
-                    <Link href="/carpet-photos" exact className="text-dark nav-item"><a>Carpet Cleaning</a></Link>
-                    <Link href="/upholstery-photos" className="text-dark nav-item"><a>Upholstery Cleaning</a></Link>
-                    <Link href="/auto-photos" exact className="text-dark nav-item"><a>Auto Detailing</a></Link>
+                    <Link href="/carpet-photos" exact className="nav-item"><a>Carpet Cleaning</a></Link>
+                    <Link href="/upholstery-photos" className="nav-item"><a>Upholstery Cleaning</a></Link>
+                    <Link href="/auto-photos" exact className="nav-item"><a>Auto Detailing</a></Link>
                   </div>
                 </AccordionDetails>
               </Accordion>
               <hr className={'style'}></hr>
             </li>
-            <RateReviewIcon style={{ color: green[500] }} /> 
-            <Link href="/reviews" className="text-dark nav-item ml-3 text-left"><a>Reviews</a>
-              {/* <li className="nav-item ml-3"></li> */}
-            </Link>
-            <li>
+            <li className="nav-item ml-3">
+              <RateReviewIcon className="mx-2" style={{ color: green[500] }} /> 
+              <Link href="/reviews" className="k nav-item ml-3 text-left"><a>Reviews</a></Link>
               <hr className={'style'}></hr>
             </li>
           </ul>

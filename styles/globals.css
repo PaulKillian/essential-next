@@ -24,6 +24,10 @@ span {
 hr {
     border: 1px solid lightgrey;
 }
+a {
+    text-decoration: none;
+    color: black;
+}
 .top1 {
     z-index: 2;
 }
@@ -345,6 +349,10 @@ p {
 .up {
     bottom: 1rem;
 }
+.left {
+    right: 2rem;
+}
+
 .bottom {
     z-index: -1;
 }
@@ -678,6 +686,10 @@ ul.top-ul {
     }
     .scale {
         transform: scale(1);
+    }
+    .nav-position {
+        width: 7%;
+        height: auto;
     }
 }
 @media only screen and (max-width: 800px) {

@@ -1,0 +1,11 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/carpet-photos": "pages/carpet-photos.js",
+  "/": "pages/index.js",
+  "/carpet-estimate": "pages/carpet-estimate.js",
+  "/reviews": "pages/reviews.js",
+  "/upholstery-photos": "pages/upholstery-photos.js",
+  "/auto-services": "pages/auto-services.js"
+}
