@@ -27,7 +27,7 @@ function Footer() {
       <footer className="pt-2 bg-footer">
         <div className="pt-2 d-flex flex-wrap d-flex justify-content-around">
           <div className="row col-md-6 col-lg-3 d-flex justify-content-around">
-            <div className={'pt-3 pb-4 ml-5'}>
+            <div className={'pt-3 pb-4 d-flex justify-content-center'}>
               <img style={{width: "50%"}} src="/images/Buisiness Photo.jpeg" alt="image of ken mendoza"></img>
             </div>
             <div className={'text-white col-md-12 text-center'}>
@@ -56,7 +56,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div id={'p-copy'} className={'text-center py-4 text-white'}>&copy; Ken Mendoza 2021</div>
+        <div id={'p-copy'} className={'text-center py-4 text-white'}>&copy; Essential Cleaning Options 2021</div>
       </footer>
   );
 }

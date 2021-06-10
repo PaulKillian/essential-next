@@ -1,6 +1,8 @@
 import React from 'react';
-// import emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com';
 import anime from 'animejs/lib/anime.es.js';
+import Nav from "../components/nav"
+import Footer from "../components/footer"
 // import MetaTags from 'react-meta-tags';
 
 class AutoEstimate extends React.Component {
@@ -112,12 +114,6 @@ class AutoEstimate extends React.Component {
     });
   }
 
-  componentDidMount() {
-    const main = document.getElementById('main');
-    main.classList.remove('position-absolute');
-    main.classList.add('position-absolute');
-  }
-
   render() {
     return (
       <>
@@ -127,18 +123,20 @@ class AutoEstimate extends React.Component {
           <meta property="og:title" content="Essential Cleaning Options: Auto Detailing Estimate" />
           <meta property="og:image" content="http://essentialcleaningoptions.com/images/auto-detailing-meta.png" />
         </MetaTags> */}
-        <div className="col-12 bottom">
-          <div className="d-flex justify-content-center align-items-center flex-column">
-            <h1 className="text-font text-white text-center mt-4 mb-5 pt-5">Schedule Estimate</h1>
+        <div id="main" className="bg-off-white w-100 auto-estimate">
+        <Nav />
+          <div className="col-12 bottom">
+            <div className="d-flex justify-content-center align-items-center flex-column">
+              <h1 className="text-font text-white text-center mt-4 mb-5 pt-5">Schedule Estimate</h1>
+            </div>
           </div>
-        </div>
-        <h1 id={'message'} className="ml16 d-none">Your Message Has Been Sent!<br></br><br></br> We will response with 24 hours</h1>
-        <div id="form" className="col-lg-12 d-flex flex-column">
+          <h1 id={'message'} className="ml16 d-none">Your Message Has Been Sent!<br></br><br></br> We will response with 24 hours</h1>
+          <div id="form" className="col-lg-12 d-flex flex-column">
           <div className="row mx-2 my-4 justify-content-center">
-            <div className="col-lg-6 col-md-10 col-sm-12 blur pb-5">
-              <form onSubmit={this.handleSubmit} action="/estimate" id="contact-form" method="POST" role="form" className="mt-5 text-white">
-                <div className="form-row">
-                  <div className="form-group col-6">
+            <div className="col-lg-6 col-md-10 col-sm-12 blur pb-3">
+              <form onSubmit={this.handleSubmit} id="contact-form" className="mt-5 text-white">
+                <div className="form-row d-flex flex-wrap justify-content-center">
+                  <div className="form-group col-5 m-3">
                     <label className="mb-0">Name</label>
                     <input
                       type="text"
@@ -149,7 +147,7 @@ class AutoEstimate extends React.Component {
                       required
                     />
                   </div>
-                  <div className="form-group col-6">
+                  <div className="form-group col-5 m-3">
                     <label className="mb-0">Email</label>
                     <input
                       type="text"
@@ -161,8 +159,8 @@ class AutoEstimate extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="form-row">
-                  <div className="form-group col-12">
+                <div className="form-row d-flex justify-content-center">
+                  <div className="form-group col-11 px-3">
                     <label className="mb-0">Subject</label>
                     <input
                       type="text"
@@ -174,9 +172,8 @@ class AutoEstimate extends React.Component {
                     />
                   </div>
                 </div>
-
-                <div className="form-row">
-                  <div className="form-group col-6">
+                <div className="form-row d-flex flex-wrap justify-content-center">
+                  <div className="form-group col-5 m-3">
                     <label className="mb-0">Make</label>
                     <input
                       type="text"
@@ -187,7 +184,7 @@ class AutoEstimate extends React.Component {
                       required
                     />
                   </div>
-                  <div className="form-group col-6">
+                  <div className="form-group col-5 m-3">
                     <label className="mb-0">Model</label>
                     <input
                       type="text"
@@ -199,9 +196,8 @@ class AutoEstimate extends React.Component {
                     />
                   </div>
                 </div>
-
-                <div className="form-row">
-                  <div className="form-group col-6">
+                <div className="form-row d-flex flex-wrap justify-content-center">
+                  <div className="form-group col-5 m-3">
                     <label className="mb-0">Year</label>
                     <input
                       type="text"
@@ -212,7 +208,7 @@ class AutoEstimate extends React.Component {
                       required
                     />
                   </div>
-                  <div className="form-group col-6">
+                  <div className="form-group col-5 m-3">
                     <label className="mb-0">Color</label>
                     <input
                       type="text"
@@ -224,8 +220,8 @@ class AutoEstimate extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="form-row">
-                  <div className="form-group col-6">
+                <div className="form-row d-flex flex-wrap justify-content-center">
+                  <div className="form-group col-5 m-3">
                     <label className="mb-0">Time of Service</label>
                     <input
                       type="text"
@@ -236,7 +232,7 @@ class AutoEstimate extends React.Component {
                       required
                     />
                   </div>
-                  <div className="form-group col-6">
+                  <div className="form-group col-5 m-3">
                     <label className="mb-0">Date of Service</label>
                     <input
                       type="text"
@@ -248,8 +244,8 @@ class AutoEstimate extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="form-row">
-                  <div className="form-group col-6">
+                <div className="form-row d-flex flex-wrap justify-content-center">
+                  <div className="form-group col-5 m-3">
                     <label className="mb-0">Best Time to Contact You</label>
                     <input
                       type="text"
@@ -260,7 +256,7 @@ class AutoEstimate extends React.Component {
                       required
                     />
                   </div>
-                  <div className="form-group col-6">
+                  <div className="form-group col-5 m-3">
                     <label className="mb-0">Best Way To Contact You</label>
                     <input
                       type="text"
@@ -272,14 +268,16 @@ class AutoEstimate extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="d-flex justify-content-center mt-3">
-                  <button type="submit" onClick={this.scroll} className="btn shadow bg-success text-white col-sm-3 col-md-4 col-lg-4">
-                    <a href="#message"></a>SEND MESSAGE</button>
-                </div>
-              </form>
+                  <div className="d-flex justify-content-center mt-3">
+                    <button type="submit" onClick={this.scroll} className="btn shadow bg-success text-white col-sm-3 col-md-4 col-lg-4">
+                      <a href="#message"></a>SEND MESSAGE</button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
+        <Footer />
       </>
     );
   }

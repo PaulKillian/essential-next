@@ -3,6 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import DetailsIcon from '@material-ui/icons/Details';
 import { Home } from '@material-ui/icons';
+import 'bootstrap/dist/css/bootstrap.css'
+import Nav from '../components/nav'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -32,6 +34,7 @@ function Hero(props) {
   if (size.matches) {
     return (
       <>
+      <Nav />
         <div className={'paralax d-flex justify-content-around flex-column align-items-center col-12'}>
           <div className={'d-flex flex-column'}>
             <div>
@@ -45,6 +48,7 @@ function Hero(props) {
   } else {
     return (
       <>
+      <Nav />
         <div className={'paralax d-flex justify-content-center flex-column align-items-center col-12'}>
           <div className={'d-flex flex-column essential justify-content-center'}>
             <div className={'display-2 text-white'}>ESSENTIAL</div>
