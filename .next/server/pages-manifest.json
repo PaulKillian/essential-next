@@ -1,11 +1,16 @@
 {
   "/_app": "pages/_app.js",
+  "/api/hello": "pages/api/hello.js",
+  "/auto-estimate": "pages/auto-estimate.html",
+  "/auto-photos": "pages/auto-photos.html",
+  "/auto-services": "pages/auto-services.html",
+  "/carpet-estimate": "pages/carpet-estimate.html",
+  "/carpet-photos": "pages/carpet-photos.html",
+  "/home": "pages/home.html",
+  "/": "pages/index.html",
+  "/reviews": "pages/reviews.html",
+  "/upholstery-photos": "pages/upholstery-photos.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/carpet-photos": "pages/carpet-photos.js",
-  "/": "pages/index.js",
-  "/carpet-estimate": "pages/carpet-estimate.js",
-  "/reviews": "pages/reviews.js",
-  "/upholstery-photos": "pages/upholstery-photos.js",
-  "/auto-services": "pages/auto-services.js"
+  "/404": "pages/404.html"
 }

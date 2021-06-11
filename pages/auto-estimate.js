@@ -1,6 +1,4 @@
 import React from 'react';
-import emailjs from 'emailjs-com';
-import anime from 'animejs/lib/anime.es.js';
 import Nav from "../components/nav"
 import Footer from "../components/footer"
 // import MetaTags from 'react-meta-tags';
@@ -30,31 +28,27 @@ class AutoEstimate extends React.Component {
 
   handleSubmit(e) {
     const { name, email, subject, make, model, year, color, time, date, bestTime, bestDate } = this.state;
-    const templateParams = {
-      name: name,
-      email: email,
-      subject: subject,
-      make: make,
-      model: model,
-      year: year,
-      color: color,
-      time: time,
-      date: date,
-      bestTime: bestTime,
-      bestDate: bestDate
-    };
     e.preventDefault();
-    emailjs.sendForm(
-      'service_o7ar5nb',
-      'template_6g67bah',
-      e.target, 'user_yN08fOCXM5x88VIH3gTgA',
-      templateParams
-    )
-      .then(result => {
-        console.log(result.text);
-      }, error => {
-        console.log(error.text);
-      });
+    Email.send({
+      SecureToken : "a4d1145c-bbaf-471e-a7d6-cd680cc48847",
+      To : "psk65lava@gmail.com",
+      From : email,
+      Subject : `Auto Detailing Estimate` ,
+      Name: name,
+      Body : `<html>
+                <h2>${name}</h2>
+                <h3>${email}</h3>
+                <p>${subject}</p>
+                <p>${make}</p>
+                <p>${model}</p>
+                <p>${year}</p>
+                <p>${color}</p>
+                <p>${time}</p>
+                <p>${date}</p>
+                <p>${bestTime}</p>
+                <p>${bestDate}</p>
+              </html>`,
+    })
     this.resetForm();
     this.SentMessage();
   }

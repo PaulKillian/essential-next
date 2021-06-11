@@ -1,6 +1,4 @@
 import React from 'react';
-import emailjs from 'emailjs-com';
-import anime from 'animejs';
 import Nav from "../components/nav"
 // import MetaTags from 'react-meta-tags';
 import Footer from "../components/footer"
@@ -30,31 +28,27 @@ class Estimate extends React.Component {
 
   handleSubmit(e) {
     const { name, email, subject, rooms, stairs, pets, estimate, time, date, bestTime, bestDate } = this.state;
-    const templateParams = {
-      name: name,
-      email: email,
-      subject: subject,
-      rooms: rooms,
-      stairs: stairs,
-      pets: pets,
-      estimate: estimate,
-      time: time,
-      date: date,
-      bestTime: bestTime,
-      bestDate: bestDate
-    };
     e.preventDefault();
-    emailjs.sendForm(
-      'service_o7ar5nb',
-      'template_hhdonmo',
-      e.target, 'user_yN08fOCXM5x88VIH3gTgA',
-      templateParams
-    )
-      .then(result => {
-        console.log(result.text);
-      }, error => {
-        console.log(error.text);
-      });
+    Email.send({
+      SecureToken : "a4d1145c-bbaf-471e-a7d6-cd680cc48847",
+      To : "psk65lava@gmail.com",
+      From : email,
+      Subject : `Carpet/Upholstery Cleaning Estimate` ,
+      Name: name,
+      Body : `<html>
+                <h2>${name}</h2>
+                <h3>${email}</h3>
+                <p>${subject}</p>
+                <p>${rooms}</p>
+                <p>${stairs}</p>
+                <p>${pets}</p>
+                <p>${estimate}</p>
+                <p>${time}</p>
+                <p>${date}</p>
+                <p>${bestTime}</p>
+                <p>${bestDate}</p>
+              </html>`,
+    })
     this.resetForm();
     this.SentMessage();
   }
